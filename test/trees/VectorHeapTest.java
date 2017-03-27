@@ -1,12 +1,13 @@
-package datastructures.heap;
+package trees;
 
 import static org.junit.Assert.*;
-import heap.TreeNode;
-import heap.VectorHeap;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import trees.VectorHeap;
+import trees.node.Node;
 
 
 public class VectorHeapTest {
@@ -24,11 +25,11 @@ public class VectorHeapTest {
 	
 	@Test
 	public void testMin() {
-		vHeap.insert(new TreeNode(1, 3));
-		vHeap.insert(new TreeNode(0, 2));
-		vHeap.insert(new TreeNode(4, 6));
-		vHeap.insert(new TreeNode(8, 10));
-		vHeap.insert(new TreeNode(2, 4));
+		vHeap.insert(new Node(1, 3));
+		vHeap.insert(new Node(0, 2));
+		vHeap.insert(new Node(4, 6));
+		vHeap.insert(new Node(8, 10));
+		vHeap.insert(new Node(2, 4));
 		
 		assertEquals(0, vHeap.min().getKey());
 		

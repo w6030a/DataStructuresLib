@@ -1,24 +1,13 @@
-package binarysearchtree;
+package trees.node;
 
-public class TreeNode {
-	int key;
-	int value;
+public class TreeNode extends Node {
 	TreeNode left;
 	TreeNode right;
 
 	public TreeNode(int key, int value) {
-		this.key = key;
-		this.value = value;
+		super(key, value);
 		this.left = null;
 		this.right = null;
-	}
-	
-	public int getKey() {
-		return key;
-	}
-	
-	public int getValue() {
-		return value;
 	}
 	
 	public  boolean isInternal() {

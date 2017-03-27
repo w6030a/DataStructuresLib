@@ -1,16 +1,11 @@
-package list;
+package trees.node;
 
-public class ListNode {
-	private int value;
+public class ListNode extends Node {
 	private ListNode next;
 	
-	public ListNode(int i) {
-		this.value = i;
+	public ListNode(int value) {
+		super(0, value);
 		this.next = null;
-	}
-	
-	public int getValue() {
-		return value;
 	}
 	
 	public ListNode getNext() {

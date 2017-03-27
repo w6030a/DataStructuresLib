@@ -1,4 +1,7 @@
-package binarysearchtree;
+package trees;
+
+import trees.node.TreeNode;
+import trees.node.TreeNodeComparator;
 
 /**
  * 

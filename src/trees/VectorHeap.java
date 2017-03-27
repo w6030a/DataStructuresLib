@@ -1,6 +1,8 @@
-package heap;
+package trees;
 
 import java.util.Vector;
+import trees.node.Node;
+import trees.node.TreeNodeComparator;
 
 /**
  * 
@@ -15,14 +17,17 @@ import java.util.Vector;
  * find()      = TODO
  * 
  */
-public class VectorHeap extends Heap {
-	Vector<TreeNode> vector = new Vector<TreeNode>();
+public class VectorHeap extends BinaryTreeInterface {
+	Vector<Node> vector = new Vector<Node>();
 	TreeNodeComparator TreeNodeComparator = new TreeNodeComparator();
 	
-	public VectorHeap(TreeNode[] nodes) {
-		//TODO: buttom-up heap construction
+	public VectorHeap() {
 	}
 	
+	public VectorHeap(Node[] nodes) {
+		//TODO: buttom-up heap construction
+	}
+
 	@Override
 	public boolean empty() {
 		return vector.isEmpty();
@@ -34,7 +39,7 @@ public class VectorHeap extends Heap {
 	}
 	
 	@Override
-	public void append(TreeNode node) {
+	public void append(Node node) {
 		vector.add(node);		
 	}
 	
@@ -43,7 +48,7 @@ public class VectorHeap extends Heap {
 		vector.remove(vector.size()-1);		
 	}
 
-	public void insert(TreeNode node) {
+	public void insert(Node node) {
 		append(node);
 		
 		int nodePos = vector.size()-1;
@@ -58,15 +63,15 @@ public class VectorHeap extends Heap {
 		}
 	}
 	
-	public TreeNode min() {
+	public Node min() {
 		return vector.elementAt(root());
 	}
 	
-	public TreeNode removeMin() {
+	public Node removeMin() {
 		if(vector.size() == 0) 
 			return null;
 		if(vector.size() == 1) {
-			TreeNode temp = vector.elementAt(root());
+			Node temp = vector.elementAt(root());
 			removeLast();
 			return temp;
 		}
@@ -88,10 +93,14 @@ public class VectorHeap extends Heap {
 		return vector.elementAt(nodePos);
 	}
 
-	public 
+	public Node[] sort() {
+		//TODO:
+		return null;
+	}
+	
 	@Override
 	public void swap(int index1, int index2) {
-		TreeNode temp = vector.elementAt(index1);
+		Node temp = vector.elementAt(index1);
 		vector.set(index1, vector.elementAt(index2)); 
 		vector.set(index2, temp);
 	}

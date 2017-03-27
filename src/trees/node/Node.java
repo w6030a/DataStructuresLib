@@ -1,10 +1,10 @@
-package heap;
+package trees.node;
 
-public class TreeNode {
+public class Node {
 	int key;
 	int value;
 
-	public TreeNode(int key, int value) {
+	public Node(int key, int value) {
 		this.key = key;
 		this.value = value;
 	}

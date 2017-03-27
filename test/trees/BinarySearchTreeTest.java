@@ -1,4 +1,4 @@
-package binarysearchtree;
+package trees;
 
 
 import static org.junit.Assert.*;
@@ -6,6 +6,9 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import trees.BinarySearchTree;
+import trees.node.TreeNode;
 
 public class BinarySearchTreeTest {
 	BinarySearchTree bsTree;

@@ -1,12 +1,14 @@
-package heap;
+package trees;
 
-public abstract class Heap {
+import trees.node.Node;
+
+public abstract class BinaryTreeInterface {
 	// operations for a b-tree
 	public abstract boolean empty();
 	public abstract int size();
 	public abstract int root(); // return index instead of the node
 	public abstract int last(); // return index instead of the node
-	public abstract void append(TreeNode node);
+	public abstract void append(Node node);
 	public abstract void removeLast(); // return index instead of the node
 	public abstract int left(int index); // return index instead of the node
 	public abstract int right(int index); // return index instead of the node

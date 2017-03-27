@@ -1,4 +1,6 @@
-package list;
+package lists;
+
+import trees.node.ListNode;
 
 /**
  * 
