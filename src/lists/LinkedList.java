@@ -9,7 +9,7 @@ import trees.node.ListNode;
  *	problematic
  */
 public class LinkedList {
-	ListNode begin = null;
+	ListNode head = null;
 	int size = 0;
 	
 	public LinkedList(int... nums) {
@@ -18,8 +18,8 @@ public class LinkedList {
 		}
 	}
 	
-	public ListNode begin() {
-		return begin;
+	public ListNode head() {
+		return head;
 	}
 	
 	public int size() {
@@ -27,21 +27,27 @@ public class LinkedList {
 	}
 	
 	public boolean empty() {
-		return begin == null;
+		return head == null;
 	}
 	
 	public void add(ListNode node) {
-		if(begin == null)
-			begin = node;
+		if(head == null)
+			head = node;
 		
-		ListNode temp  = begin;
-		// get the last node
-		while(temp.getNext() != null) {
-			temp = temp.getNext();
-		}
+		ListNode temp  = getLast();
 		temp.setNext(node);
 		node.setNext(null);
 		this.size++;
+	}
+	
+	private ListNode getLast() {
+		ListNode temp  = head;
+		
+		while(temp.hasNext()) {
+			temp = temp.getNext();
+		}
+		
+		return temp;
 	}
 	
 	public void delete(ListNode node) {
@@ -49,7 +55,7 @@ public class LinkedList {
 	}
 	
 	public void removeDuplicate() {
-		ListNode current = begin;
+		ListNode current = head;
 		
 		while(current.hasNext()) {
 			print(current);
@@ -64,7 +70,7 @@ public class LinkedList {
 	}
 	
 	public void print() {
-		ListNode temp = begin;
+		ListNode temp = head;
 		while(temp != null) {
 			System.out.print(temp.getValue());
 			temp = temp.getNext();
@@ -79,5 +85,21 @@ public class LinkedList {
 			temp = temp.getNext();
 		}
 		System.out.println();
+	}
+	
+	public void reverse() {
+		ListNode last = null;
+		ListNode curr = head();
+		ListNode temp;
+		
+		while(curr != null) {
+			temp = curr.getNext();
+			curr.setNext(last);
+			
+			last = curr;
+			curr = temp;
+		}
+		
+		this.head = last;
 	}
 }

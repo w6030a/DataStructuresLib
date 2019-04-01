@@ -1,4 +1,4 @@
-package trees;
+package tree;
 
 import trees.node.TreeNode;
 import trees.node.TreeNodeComparator;

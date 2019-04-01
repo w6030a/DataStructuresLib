@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import trees.VectorHeap;
+import tree.VectorHeap;
 import trees.node.Node;
 
 

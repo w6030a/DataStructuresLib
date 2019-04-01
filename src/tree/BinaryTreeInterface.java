@@ -1,4 +1,4 @@
-package trees;
+package tree;
 
 import trees.node.Node;
 

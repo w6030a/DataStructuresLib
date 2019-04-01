@@ -1,4 +1,4 @@
-package trees;
+package tree;
 
 import java.util.Vector;
 import trees.node.Node;
